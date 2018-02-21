@@ -1,0 +1,13 @@
+<h1>Shorten URL</h1>
+<% @urls.each do |url| %>
+  <p>
+    <b>Your original URL</b>
+    <%= link_to url.original %>
+  </p>
+  <p> <b>Your SHORT URL is: </b>
+    <%= link_to url.random_id, url.original %>
+  </p>
+  <br>
+<% end %>
+
+<%= link_to "Shorten another URL", new_url_path %>
